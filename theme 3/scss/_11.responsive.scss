@@ -1,0 +1,150 @@
+@include responsive($ipad-pro) {
+
+    .nav {
+        padding: 0vh 3vw;
+
+        &-logo {
+            margin-bottom: 0rem;
+        }
+
+        &-popup {
+            width: 50rem;
+            height: 25rem;
+            padding: 4vh 0vw;
+        }
+    }
+
+    .slideshow {
+        &-content {
+            left: 6rem;
+        }
+        
+        &-slide{
+            img{
+            object-fit: cover ;
+
+            }
+        }
+    }
+
+    .section-feature {
+        justify-content: space-around;
+    }
+
+    .featurebox {
+        margin-top: 5rem;
+    }
+
+    .section-cards {
+        justify-content: space-evenly;
+    }
+
+    .offersbox {
+        margin-top: 4rem;
+    }
+    .featurebox{
+        width: 440px;
+        height:440px;
+    }
+
+}
+
+
+@include responsive($ipad) {
+
+    .navigation {
+        visibility: visible;
+    }
+
+    .nav {
+        justify-content: center;
+
+        &-logo {
+            font-size: 3rem;
+            text-align: center;
+        }
+
+        &-items {
+            display: none;
+        }
+
+        &-icons {
+            display: none;
+        }
+    }
+
+    .cate-items {
+        // display: none;
+        margin-right: 3rem;
+    }
+
+    .footer-sec {
+        padding: 5vh 0vw;
+        flex-wrap: wrap;
+    }
+    .featurebox{
+        width: 440px;
+        height:440px;
+    }
+
+}
+
+@include responsive($iphone-x) {
+
+    .slideshow {
+        padding: 0;
+
+        &-content {
+            width: 100%;
+            left: 0rem;
+
+            h2 {
+                font-size: 3rem;
+            }
+        }
+    }
+
+    .featurebox {
+        width: 300px;
+        height: 300px;
+    }
+
+    .cate-items {
+        margin-top: 1.5rem;
+    }
+
+    .section-categories {
+        display: none;
+    }
+    
+    // .cate-items {
+    //     display: none;
+    //     margin-right: 3rem;
+    // }
+
+    .footer {
+        text-align: center;
+
+        &-list {
+            width: 300px;
+        }
+
+        &-items {
+            float: none !important;
+            margin-top: 2rem;
+
+            &:not(:first-child) {
+                margin-left: 0 !important;
+            }
+
+            &::before {
+                display: none;
+            }
+        }
+
+        &-links {
+            font-size: 1.4rem !important;
+        }
+    }
+
+}

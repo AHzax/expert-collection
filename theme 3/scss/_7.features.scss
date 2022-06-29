@@ -1,0 +1,96 @@
+.section-feature {
+  grid-row: 4/5;
+  grid-column: center-start/ center-end;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.featurebox {
+  height: 550px;
+  width: 642px;
+  background-color: yellow;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  position: relative;
+  display: grid;
+  grid-template-rows: repeat(2, 1fr);
+  grid-template-columns: repeat(8, 1fr);
+  transition: background-position 0.5s ease;
+  img {
+    width: 100%;
+    height: 100%;
+    grid-column: 1/-1;
+    grid-row: 1/-1;
+  }
+
+  &-content {
+    grid-column: 2/4;
+    grid-row: 2/-2;
+    width: 200px;
+    height: 100px;
+
+    &-heading {
+      font-size: 3.2rem;
+      color: white;
+      text-shadow: 0 0rem 1rem black;
+    }
+
+    &-para {
+      font-size: 1.6rem;
+      color: var(--color-text-light);
+      color: white;
+    }
+  }
+
+  &-1 {
+    background-image: url("../img/cate/Desktop_d58637c1-ff26-4d2f-aef7-86ff2bcd4fa1.webp");
+  }
+
+  &-2 {
+    background-image: url("../img/cate/main_menu_women_unstitched.webp");
+  }
+
+  &:hover {
+    background-position: top;
+  }
+}
+
+.section-categories {
+  grid-row: 5/6;
+  grid-column: center-start / center-end;
+  // @extend %sec-padding;
+  padding: 5rem 0rem 0rem 0rem;
+}
+
+// .cate-list{
+// margin-left: 30px;
+// }
+
+.cate-items {
+  position: relative;
+  float: left;
+  margin-right: 5rem;
+  z-index: 3000;
+  transition: all 0.2s ease-in-out;
+  a {
+    font-weight: bolder;
+  }
+  &::before {
+    content: "";
+    top: 1.9rem;
+    position: absolute;
+    width: 95%;
+    transform: scaleX(0);
+    height: 3px;
+    transform-origin: left;
+    background-color: var(--color-text-dark);
+    transition: var(--transition-duration);
+  }
+
+  &:hover::before {
+    transform: scaleX(1);
+  }
+}

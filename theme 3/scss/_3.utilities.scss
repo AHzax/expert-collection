@@ -1,0 +1,48 @@
+:root {
+    font-size: 62.5%;
+}
+
+body {
+    font-family: "Roboto", sans-serif;
+    line-height: 1.9;
+    background-color: white;
+    overflow-x: hidden;
+    padding:0px 20px 0px 20px;
+
+}
+
+.mb-15{
+color: white;
+    margin-bottom: 1.5rem;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 
+        [container-start] 1fr [center-start] repeat(
+            8,
+            [col-start] minmax(min-content, 17rem) [col-end]
+        )
+        [center-end] 1fr [container-end];
+    grid-template-rows: min-content 75vh repeat(9, min-content);
+}
+
+li {
+    list-style: none;
+}
+
+
+a:link,
+a:visited {
+    text-decoration: none;
+    color: var(--color-text-dark);
+    font-weight: fw(fw-medium);
+    letter-spacing: 0.2rem;
+    font-size: fs(fs-xsmall);
+}
+
+
+i {
+    color: white;
+    font-size: fs(fs-medium);
+}

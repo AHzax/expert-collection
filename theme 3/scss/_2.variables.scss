@@ -1,0 +1,66 @@
+// * Light colors
+html {
+
+    --box-shadow: rgb(238, 238, 238);
+    --color-text:rgb(100, 100, 100);
+    --color-text-light: rgb(37, 37, 37);
+    --color-text-dark:rgb(42, 42, 42);
+    
+    ---color-primary:white;
+
+    --color-quinary-m: rgba(255, 255, 255, 0.5);
+
+    --transition-duration: all 0.3s ease-in-out;
+
+
+}
+// * Dark colors
+
+html[data-theme="dark"] {
+
+    --box-shadow: rgb(238, 238, 238);
+    --color-text-light: rgb(37, 37, 37);
+    --color-text-dark:rgb(42, 42, 42);
+    
+    ---color-primary:white;
+
+    --color-quinary-m: rgba(255, 255, 255, 0.5);
+
+}
+
+$font-weights: (
+    "fw-thin": 100, 
+    "fw-light": 300, 
+    "fw-regular": 400, 
+    "fw-medium": 500, 
+    "fw-bold": 700, 
+    "fw-black": 900, 
+);
+
+@function fw($font-weight-style) {
+    @return map-get($font-weights, $font-weight-style);
+}
+
+$font-sizes: (
+    "fs-xsmall": calc(1rem + 0.3vw),
+    "fs-small": calc(1.3rem + 0.5vw),
+    "fs-regular": calc(1.5rem + 1vw),
+    "fs-medium": calc(1.5rem + 2vw),
+    "fs-large": calc(1.5rem + 5vw),
+    "fs-xlarge": calc(2rem + 5vw),
+);
+
+@function fs($font-size-style) {
+    @return map-get($font-sizes, $font-size-style);
+}
+
+$break-points: (
+    "break-point-small": 400px,
+    "break-point-medium": 600px,
+    "break-point-tablet": 800px,
+    "break-point-desktop": 1300px,
+);
+
+@function break-point($break-point-limit) {
+    @return map-get($break-points, $break-point-limit);
+}

@@ -1,0 +1,71 @@
+
+// /responsive variables
+$ipad-pro:1124px;
+$ipad:768px;
+$iphone-x:375px;
+
+
+//responsive
+@mixin responsive($display) {
+    @media (max-width:$display) {
+        @content;
+    }
+}
+
+
+
+::selection{
+    background-color: var(--color-primary);
+}
+
+@import "./1.resets";
+@import "./2.variables";
+@import "./3.utilities";
+@import "./4.header";
+@import "./5.showcase";
+@import "./6.navbar";
+@import "./7.features";
+@import "./11.responsive";
+@import "./12.footer";
+@import "./login";
+
+html.transition,
+html.transition *,
+html.transition *::before,
+html.transition *::after{
+    transition: all 0.5s !important;
+    transition-delay: 0 !important;
+}
+
+%bg{
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+%sec-padding{
+    padding: 8vh 0vw;
+}
+
+%sec-heading{
+    font-size: font-size(fs-medium);
+    font-weight: font-weight(fw-light);
+    letter-spacing: 0.2rem;
+    color: var(--color-text-dark);
+}
+
+%sec-para{
+    font-size: font-size(fs-small);
+    color:var(--color-text-dark);
+    font-family: "Balsamiq", cursive;
+    letter-spacing: 0.2rem;
+}
+
+%sec-h3{
+    font-size: font-size(fs-small);
+    color: var(--color-text-dark);
+}
+
+%sec-h4{
+    color: var(--color-text-dark);
+}       

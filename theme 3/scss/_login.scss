@@ -1,0 +1,47 @@
+.body1{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0 ;
+}
+.container1{
+
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ background-color: rgba(10, 9, 9, 0.879);
+height: 100vh;
+flex-direction: column;
+color: white;
+
+.back{
+    color: black;
+    background-color: white;
+    padding: 3px 5px;
+    border-radius: 5px;
+    font-size: large;
+    font-weight:400;
+}
+form{
+    background-color: rgb(3, 3,3);
+    padding: 4rem;
+}
+fieldset{
+    margin:1.4rem 0rem;
+}
+input{
+    padding:1rem 6rem;
+    // border: none;
+}
+textarea{
+    padding:2rem 6.4rem;
+   
+}
+button{
+    padding: 1rem 4rem;
+}
+a:link{
+    color:rgb(218, 218, 218);
+}
+}
+
+
